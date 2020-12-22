@@ -1,48 +1,48 @@
 module.exports = {
   siteMetadata: {
-    title: "Justin Portfolio",
+    title: 'Justin Portfolio',
   },
   plugins: [
+    // {
+    //   resolve: "gatsby-source-contentful",
+    //   options: {
+    //     accessToken: "",
+    //     spaceId: "",
+    //   },
+    // },
+    'gatsby-plugin-postcss',
+    // {
+    //   resolve: "gatsby-plugin-google-analytics",
+    //   options: {
+    //     trackingId: "",
+    //   },
+    // },
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        accessToken: "",
-        spaceId: "",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-plugin-postcss",
+    'gatsby-plugin-mdx',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        trackingId: "",
+        name: 'images',
+        path: './src/images/',
       },
-    },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
 };
